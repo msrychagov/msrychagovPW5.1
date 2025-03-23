@@ -6,59 +6,63 @@ final class NewsCell: UITableViewCell {
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     
-    // Чтобы не путать картинки при переиспользовании
+    // Чтобы не путать картинки
     private var currentURL: URL?
-    
+
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        setupUI()
+        
+        setupViews()
+        setupConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    private func setupUI() {
+    private func setupViews() {
+        // Настройки imageView
         newsImageView.contentMode = .scaleAspectFill
         newsImageView.clipsToBounds = true
+        newsImageView.translatesAutoresizingMaskIntoConstraints = false
         
+        // Настройки titleLabel
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        descriptionLabel.numberOfLines = 2
+        titleLabel.numberOfLines = 2
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        
+        // Настройки descriptionLabel
         descriptionLabel.font = UIFont.systemFont(ofSize: 14)
-
+        descriptionLabel.numberOfLines = 3
+        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        
         contentView.addSubview(newsImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(descriptionLabel)
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
+    private func setupConstraints() {
         let padding: CGFloat = 8
-        let imageSide: CGFloat = 60
-        
-        newsImageView.frame = CGRect(
-            x: padding,
-            y: padding,
-            width: imageSide,
-            height: imageSide
-        )
-        
-        let textX = newsImageView.frame.maxX + padding
-        let textWidth = contentView.bounds.width - textX - padding
-        
-        titleLabel.frame = CGRect(
-            x: textX,
-            y: padding,
-            width: textWidth,
-            height: 20
-        )
-        descriptionLabel.frame = CGRect(
-            x: textX,
-            y: titleLabel.frame.maxY + 4,
-            width: textWidth,
-            height: 35
-        )
+        NSLayoutConstraint.activate([
+            // Картинка слева
+            newsImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
+            newsImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            newsImageView.widthAnchor.constraint(equalToConstant: 60),
+            newsImageView.heightAnchor.constraint(equalToConstant: 60),
+            
+            // Заголовок справа от картинки
+            titleLabel.leadingAnchor.constraint(equalTo: newsImageView.trailingAnchor, constant: padding),
+            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
+            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
+            
+            // Описание под заголовком
+            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
+            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
+            descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
+            
+            // Отступ снизу для корректной высоты
+            descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)
+        ])
     }
     
     func configure(with article: ArticleModel?) {

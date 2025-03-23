@@ -21,8 +21,13 @@ final class NewsListViewController: UIViewController, NewsListViewInput {
         tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
+        // ВАЖНО: включаем авторасчёт высоты ячеек
+        tableView.estimatedRowHeight = 120
+        tableView.rowHeight = UITableView.automaticDimension
+
         output?.viewDidLoad()
     }
+
     
     // MARK: - NewsListViewInput
     func reloadData() {
