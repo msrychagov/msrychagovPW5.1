@@ -1,0 +1,572 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		F54CA1F22D90C6EA000FE1E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F54CA1D02D90C6E9000FE1E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54CA1D72D90C6E9000FE1E1;
+			remoteInfo = msrychagovPW5.1;
+		};
+		F54CA1FC2D90C6EA000FE1E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F54CA1D02D90C6E9000FE1E1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F54CA1D72D90C6E9000FE1E1;
+			remoteInfo = msrychagovPW5.1;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F54CA1D82D90C6E9000FE1E1 /* msrychagovPW5.1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = msrychagovPW5.1.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54CA1F12D90C6EA000FE1E1 /* msrychagovPW5.1Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msrychagovPW5.1Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F54CA1FB2D90C6EA000FE1E1 /* msrychagovPW5.1UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = msrychagovPW5.1UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F54CA2032D90C6EA000FE1E1 /* Exceptions for "msrychagovPW5.1" folder in "msrychagovPW5.1" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F54CA1D72D90C6E9000FE1E1 /* msrychagovPW5.1 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		F54CA1DA2D90C6E9000FE1E1 /* msrychagovPW5.1 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F54CA2032D90C6EA000FE1E1 /* Exceptions for "msrychagovPW5.1" folder in "msrychagovPW5.1" target */,
+			);
+			path = msrychagovPW5.1;
+			sourceTree = "<group>";
+		};
+		F54CA1F42D90C6EA000FE1E1 /* msrychagovPW5.1Tests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = msrychagovPW5.1Tests;
+			sourceTree = "<group>";
+		};
+		F54CA1FE2D90C6EA000FE1E1 /* msrychagovPW5.1UITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = msrychagovPW5.1UITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F54CA1D52D90C6E9000FE1E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54CA1EE2D90C6EA000FE1E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54CA1F82D90C6EA000FE1E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F54CA1CF2D90C6E9000FE1E1 = {
+			isa = PBXGroup;
+			children = (
+				F54CA1DA2D90C6E9000FE1E1 /* msrychagovPW5.1 */,
+				F54CA1F42D90C6EA000FE1E1 /* msrychagovPW5.1Tests */,
+				F54CA1FE2D90C6EA000FE1E1 /* msrychagovPW5.1UITests */,
+				F54CA1D92D90C6E9000FE1E1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F54CA1D92D90C6E9000FE1E1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F54CA1D82D90C6E9000FE1E1 /* msrychagovPW5.1.app */,
+				F54CA1F12D90C6EA000FE1E1 /* msrychagovPW5.1Tests.xctest */,
+				F54CA1FB2D90C6EA000FE1E1 /* msrychagovPW5.1UITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F54CA1D72D90C6E9000FE1E1 /* msrychagovPW5.1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54CA2042D90C6EA000FE1E1 /* Build configuration list for PBXNativeTarget "msrychagovPW5.1" */;
+			buildPhases = (
+				F54CA1D42D90C6E9000FE1E1 /* Sources */,
+				F54CA1D52D90C6E9000FE1E1 /* Frameworks */,
+				F54CA1D62D90C6E9000FE1E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F54CA1DA2D90C6E9000FE1E1 /* msrychagovPW5.1 */,
+			);
+			name = msrychagovPW5.1;
+			packageProductDependencies = (
+			);
+			productName = msrychagovPW5.1;
+			productReference = F54CA1D82D90C6E9000FE1E1 /* msrychagovPW5.1.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F54CA1F02D90C6EA000FE1E1 /* msrychagovPW5.1Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54CA2092D90C6EA000FE1E1 /* Build configuration list for PBXNativeTarget "msrychagovPW5.1Tests" */;
+			buildPhases = (
+				F54CA1ED2D90C6EA000FE1E1 /* Sources */,
+				F54CA1EE2D90C6EA000FE1E1 /* Frameworks */,
+				F54CA1EF2D90C6EA000FE1E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54CA1F32D90C6EA000FE1E1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F54CA1F42D90C6EA000FE1E1 /* msrychagovPW5.1Tests */,
+			);
+			name = msrychagovPW5.1Tests;
+			packageProductDependencies = (
+			);
+			productName = msrychagovPW5.1Tests;
+			productReference = F54CA1F12D90C6EA000FE1E1 /* msrychagovPW5.1Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F54CA1FA2D90C6EA000FE1E1 /* msrychagovPW5.1UITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F54CA20C2D90C6EA000FE1E1 /* Build configuration list for PBXNativeTarget "msrychagovPW5.1UITests" */;
+			buildPhases = (
+				F54CA1F72D90C6EA000FE1E1 /* Sources */,
+				F54CA1F82D90C6EA000FE1E1 /* Frameworks */,
+				F54CA1F92D90C6EA000FE1E1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F54CA1FD2D90C6EA000FE1E1 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				F54CA1FE2D90C6EA000FE1E1 /* msrychagovPW5.1UITests */,
+			);
+			name = msrychagovPW5.1UITests;
+			packageProductDependencies = (
+			);
+			productName = msrychagovPW5.1UITests;
+			productReference = F54CA1FB2D90C6EA000FE1E1 /* msrychagovPW5.1UITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F54CA1D02D90C6E9000FE1E1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1610;
+				LastUpgradeCheck = 1610;
+				TargetAttributes = {
+					F54CA1D72D90C6E9000FE1E1 = {
+						CreatedOnToolsVersion = 16.1;
+					};
+					F54CA1F02D90C6EA000FE1E1 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = F54CA1D72D90C6E9000FE1E1;
+					};
+					F54CA1FA2D90C6EA000FE1E1 = {
+						CreatedOnToolsVersion = 16.1;
+						TestTargetID = F54CA1D72D90C6E9000FE1E1;
+					};
+				};
+			};
+			buildConfigurationList = F54CA1D32D90C6E9000FE1E1 /* Build configuration list for PBXProject "msrychagovPW5.1" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F54CA1CF2D90C6E9000FE1E1;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = F54CA1D92D90C6E9000FE1E1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F54CA1D72D90C6E9000FE1E1 /* msrychagovPW5.1 */,
+				F54CA1F02D90C6EA000FE1E1 /* msrychagovPW5.1Tests */,
+				F54CA1FA2D90C6EA000FE1E1 /* msrychagovPW5.1UITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F54CA1D62D90C6E9000FE1E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54CA1EF2D90C6EA000FE1E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54CA1F92D90C6EA000FE1E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F54CA1D42D90C6E9000FE1E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54CA1ED2D90C6EA000FE1E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F54CA1F72D90C6EA000FE1E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F54CA1F32D90C6EA000FE1E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54CA1D72D90C6E9000FE1E1 /* msrychagovPW5.1 */;
+			targetProxy = F54CA1F22D90C6EA000FE1E1 /* PBXContainerItemProxy */;
+		};
+		F54CA1FD2D90C6EA000FE1E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F54CA1D72D90C6E9000FE1E1 /* msrychagovPW5.1 */;
+			targetProxy = F54CA1FC2D90C6EA000FE1E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F54CA2052D90C6EA000FE1E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7KVC9GS82W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = msrychagovPW5.1/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "msrychagov.msrychagovPW5-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F54CA2062D90C6EA000FE1E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7KVC9GS82W;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = msrychagovPW5.1/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "msrychagov.msrychagovPW5-1";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F54CA2072D90C6EA000FE1E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F54CA2082D90C6EA000FE1E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F54CA20A2D90C6EA000FE1E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7KVC9GS82W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "msrychagov.msrychagovPW5-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/msrychagovPW5.1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/msrychagovPW5.1";
+			};
+			name = Debug;
+		};
+		F54CA20B2D90C6EA000FE1E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7KVC9GS82W;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "msrychagov.msrychagovPW5-1Tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/msrychagovPW5.1.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/msrychagovPW5.1";
+			};
+			name = Release;
+		};
+		F54CA20D2D90C6EA000FE1E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7KVC9GS82W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "msrychagov.msrychagovPW5-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = msrychagovPW5.1;
+			};
+			name = Debug;
+		};
+		F54CA20E2D90C6EA000FE1E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 7KVC9GS82W;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "msrychagov.msrychagovPW5-1UITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = msrychagovPW5.1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F54CA1D32D90C6E9000FE1E1 /* Build configuration list for PBXProject "msrychagovPW5.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54CA2072D90C6EA000FE1E1 /* Debug */,
+				F54CA2082D90C6EA000FE1E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54CA2042D90C6EA000FE1E1 /* Build configuration list for PBXNativeTarget "msrychagovPW5.1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54CA2052D90C6EA000FE1E1 /* Debug */,
+				F54CA2062D90C6EA000FE1E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54CA2092D90C6EA000FE1E1 /* Build configuration list for PBXNativeTarget "msrychagovPW5.1Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54CA20A2D90C6EA000FE1E1 /* Debug */,
+				F54CA20B2D90C6EA000FE1E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F54CA20C2D90C6EA000FE1E1 /* Build configuration list for PBXNativeTarget "msrychagovPW5.1UITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F54CA20D2D90C6EA000FE1E1 /* Debug */,
+				F54CA20E2D90C6EA000FE1E1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F54CA1D02D90C6E9000FE1E1 /* Project object */;
+}
