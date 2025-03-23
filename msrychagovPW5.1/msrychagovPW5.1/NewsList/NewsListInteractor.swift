@@ -6,7 +6,6 @@ final class NewsListInteractor: NewsListBusinessLogic {
     
     private let decoder = JSONDecoder()
     
-    // Пример подгрузки с Seldon News
     func loadArticles() {
         guard let url = URL(string: "https://news.myseldon.com/api/Section?rubricId=4&pageSize=8&pageIndex=1") else {
             return
@@ -23,7 +22,6 @@ final class NewsListInteractor: NewsListBusinessLogic {
             
             do {
                 var newsPage = try self.decoder.decode(NewsPage.self, from: data)
-                // Проставляем requestId во все статьи
                 newsPage.passRequestIdToArticles()
                 
                 let articles = newsPage.news ?? []

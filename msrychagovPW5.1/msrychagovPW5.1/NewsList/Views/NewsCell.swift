@@ -2,78 +2,93 @@ import UIKit
 
 final class NewsCell: UITableViewCell {
     
+    // MARK: - Subviews
     private let newsImageView = UIImageView()
     private let titleLabel = UILabel()
     private let descriptionLabel = UILabel()
     
+    // MARK: - Internal State
     private var currentURL: URL?
     
+    // MARK: - UIConstants
+    private enum UIConstants {
+        // Отступы
+        static let padding: Double = 8
+        static let descriptionTopOffset: Double = 4
+        
+        // Размер картинки
+        static let imageSide: Double = 60
+        
+        // Шрифт (можем вынести и имя шрифта, если нужно)
+        static let titleFontSize: CGFloat = 16
+        static let descriptionFontSize: CGFloat = 14
+        
+        // Количество строк
+        static let titleNumberOfLines: Int = 2
+        static let descriptionNumberOfLines: Int = 3
+        
+        static let placeholderTitle: String = "No title"
+        static let placeholderDescription: String = "No description"
+        
+    }
+    
+    // MARK: - Init
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupViews()
-        setupConstraints()
+        setupConstraintsWithPin()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Setup Subviews
     private func setupViews() {
         newsImageView.contentMode = .scaleAspectFill
         newsImageView.clipsToBounds = true
-        newsImageView.translatesAutoresizingMaskIntoConstraints = false
         
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
-        titleLabel.numberOfLines = 2
-        titleLabel.translatesAutoresizingMaskIntoConstraints = false
+        titleLabel.font = UIFont.boldSystemFont(ofSize: UIConstants.titleFontSize)
+        titleLabel.numberOfLines = UIConstants.titleNumberOfLines
         
-        descriptionLabel.font = UIFont.systemFont(ofSize: 14)
-        descriptionLabel.numberOfLines = 3
-        descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
+        descriptionLabel.font = UIFont.systemFont(ofSize: UIConstants.descriptionFontSize)
+        descriptionLabel.numberOfLines = UIConstants.descriptionNumberOfLines
         
         contentView.addSubview(newsImageView)
         contentView.addSubview(titleLabel)
         contentView.addSubview(descriptionLabel)
     }
     
-    private func setupConstraints() {
-        let padding: CGFloat = 8
+    // MARK: - Constraints via Pin
+    private func setupConstraintsWithPin() {
+        newsImageView.pinLeft(to: contentView, UIConstants.padding)
+        newsImageView.pinTop(to: contentView, UIConstants.padding)
+        newsImageView.setWidth(mode: .equal, UIConstants.imageSide)
+        newsImageView.setHeight(mode: .equal, UIConstants.imageSide)
         
-        NSLayoutConstraint.activate([
-            newsImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: padding),
-            newsImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-            newsImageView.widthAnchor.constraint(equalToConstant: 60),
-            newsImageView.heightAnchor.constraint(equalToConstant: 60),
-            
-            titleLabel.leadingAnchor.constraint(equalTo: newsImageView.trailingAnchor, constant: padding),
-            titleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: padding),
-            titleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -padding),
-            
-            descriptionLabel.leadingAnchor.constraint(equalTo: titleLabel.leadingAnchor),
-            descriptionLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 4),
-            descriptionLabel.trailingAnchor.constraint(equalTo: titleLabel.trailingAnchor),
-            descriptionLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -padding)
-        ])
+        // Заголовок
+        titleLabel.pinLeft(to: newsImageView.trailingAnchor, UIConstants.padding)
+        titleLabel.pinTop(to: contentView, UIConstants.padding)
+        titleLabel.pinRight(to: contentView, UIConstants.padding)
+        
+        // Описание
+        descriptionLabel.pinLeft(to: titleLabel.leadingAnchor)
+        descriptionLabel.pinTop(to: titleLabel.bottomAnchor, UIConstants.descriptionTopOffset)
+        descriptionLabel.pinRight(to: titleLabel.trailingAnchor)
+        descriptionLabel.pinBottom(to: contentView, UIConstants.padding)
     }
     
+    // MARK: - Configure
     func configure(with article: ArticleModel?) {
-        titleLabel.text = article?.title ?? "No title"
-        descriptionLabel.text = article?.announce ?? "No description"
+        titleLabel.text = article?.title ?? UIConstants.placeholderTitle
+        descriptionLabel.text = article?.announce ?? UIConstants.placeholderDescription
         
-        // Перед загрузкой картинки — сброс
         newsImageView.image = nil
         
-        guard let url = article?.img?.url else {
-            // Нет URL картинки — убираем shimmer на всякий случай
-            newsImageView.stopShimmering()
-            return
+        if let url = article?.img?.url {
+            loadImage(from: url)
         }
-        
-        // Запускаем shimmer, пока загружается изображение
-        newsImageView.startShimmering()
-        
-        loadImage(from: url)
     }
     
     private func loadImage(from url: URL) {
@@ -82,21 +97,12 @@ final class NewsCell: UITableViewCell {
         DispatchQueue.global().async { [weak self] in
             guard let data = try? Data(contentsOf: url),
                   let image = UIImage(data: data)
-            else {
-                // Загрузка не удалась — убираем shimmer, но не выставляем картинку
-                DispatchQueue.main.async {
-                    self?.newsImageView.stopShimmering()
-                }
-                return
-            }
+            else { return }
             
             DispatchQueue.main.async {
-                // Если URL не успел измениться при переиспользовании ячейки
                 if self?.currentURL == url {
                     self?.newsImageView.image = image
                 }
-                // В любом случае останавливаем shimmer
-                self?.newsImageView.stopShimmering()
             }
         }
     }

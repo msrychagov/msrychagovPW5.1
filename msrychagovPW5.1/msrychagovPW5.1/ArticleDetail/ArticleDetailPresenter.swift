@@ -12,10 +12,8 @@ final class ArticleDetailPresenter: ArticleDetailPresentationLogic, ArticleDetai
     }
     
     func viewDidLoad() {
-        // Можно что-то запросить у Interactor
         interactor?.fetchSomethingIfNeeded()
         
-        // Говорим View загрузить URL
         view?.loadWebPage(articleURL)
     }
 }

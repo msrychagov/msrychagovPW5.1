@@ -29,7 +29,6 @@ final class NewsListPresenter: NewsListViewOutput, NewsListInteractorOutput {
             return
         }
         
-        // В данном случае шарим URL (можете подставить любой другой контент).
         completion(articles[index].articleUrl)
     }
     

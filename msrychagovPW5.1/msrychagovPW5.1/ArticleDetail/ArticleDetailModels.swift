@@ -18,7 +18,6 @@ struct ArticleModel: Decodable {
     var announce: String?
     var img: ImageContainer?
     
-    // Поле для подстановки requestId
     var requestId: String?
     
     var articleUrl: URL? {

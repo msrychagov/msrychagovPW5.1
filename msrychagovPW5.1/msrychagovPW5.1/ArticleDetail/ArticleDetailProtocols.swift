@@ -5,7 +5,6 @@ protocol ArticleDetailBusinessLogic: AnyObject {
 }
 
 protocol ArticleDetailInteractorOutput: AnyObject {
-    // Пример, если хотим что‑то возвращать
 }
 
 protocol ArticleDetailPresentationLogic: AnyObject {

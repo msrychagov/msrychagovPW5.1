@@ -4,39 +4,64 @@ final class NewsListViewController: UIViewController, NewsListViewInput {
     
     var output: NewsListViewOutput?
     
+    // MARK: - UIConstants
+    private enum UIConstants {
+        // Числовые константы
+        static let estimatedRowHeight: CGFloat = 120
+        
+        // Идентификаторы
+        static let cellIdentifier = "NewsCell"
+        
+        // Тексты
+        static let navBarTitle = "News"
+        static let shareActionTitle = "Share"
+        static let errorAlertTitle = "Ошибка"
+        static let errorAlertButton = "ОК"
+        
+        // Цвета
+        static let shareActionColor: UIColor = .systemBlue
+    }
+    
+    // MARK: - TableView
     private lazy var tableView: UITableView = {
         let tv = UITableView()
-        tv.register(NewsCell.self, forCellReuseIdentifier: "NewsCell")
+        tv.register(NewsCell.self, forCellReuseIdentifier: UIConstants.cellIdentifier)
         tv.dataSource = self
         tv.delegate = self
+        
+        // Устанавливаем оценочную высоту и автоматическую высоту строк
+        tv.estimatedRowHeight = UIConstants.estimatedRowHeight
+        tv.rowHeight = UITableView.automaticDimension
+        
         return tv
     }()
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         view.backgroundColor = .systemBackground
-        title = "News"
-
+        title = UIConstants.navBarTitle
+        
         view.addSubview(tableView)
         tableView.frame = view.bounds
         tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-
-        // ВАЖНО: включаем авторасчёт высоты ячеек
-        tableView.estimatedRowHeight = 120
-        tableView.rowHeight = UITableView.automaticDimension
-
+        
         output?.viewDidLoad()
     }
 
-    
     // MARK: - NewsListViewInput
     func reloadData() {
         tableView.reloadData()
     }
     
     func showError(_ message: String) {
-        let alert = UIAlertController(title: "Ошибка", message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "ОК", style: .default))
+        let alert = UIAlertController(
+            title: UIConstants.errorAlertTitle,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: UIConstants.errorAlertButton, style: .default))
         present(alert, animated: true)
     }
 }
@@ -53,10 +78,13 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
         cellForRowAt indexPath: IndexPath
     ) -> UITableViewCell {
         
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as? NewsCell
-        else {
+        guard let cell = tableView.dequeueReusableCell(
+            withIdentifier: UIConstants.cellIdentifier,
+            for: indexPath
+        ) as? NewsCell else {
             return UITableViewCell()
         }
+        
         let article = output?.article(at: indexPath.row)
         cell.configure(with: article)
         return cell
@@ -69,13 +97,15 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
         output?.didTapCell(at: indexPath.row)
     }
     
-    // iOS 11+ добавляет trailingSwipeActionsConfigurationForRowAt
     func tableView(
         _ tableView: UITableView,
         trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath
     ) -> UISwipeActionsConfiguration? {
         
-        let shareAction = UIContextualAction(style: .normal, title: "Share") { [weak self] action, view, completion in
+        let shareAction = UIContextualAction(
+            style: .normal,
+            title: UIConstants.shareActionTitle
+        ) { [weak self] _, _, completion in
             self?.output?.didSwipeShare(at: indexPath.row) { url in
                 guard let url = url else {
                     completion(false)
@@ -86,7 +116,8 @@ extension NewsListViewController: UITableViewDataSource, UITableViewDelegate {
                 completion(true)
             }
         }
-        shareAction.backgroundColor = .systemBlue
+        
+        shareAction.backgroundColor = UIConstants.shareActionColor
         
         return UISwipeActionsConfiguration(actions: [shareAction])
     }
